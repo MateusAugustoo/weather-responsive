@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Weather</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Dashboard Weather</h1>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="container__search">
+          <form class="form__search__city__name">
+            <label for="input__city">Enter a City Name</label>
+            <input
+              type="text"
+              placeholder="new york, london, tokyo"
+              id="input__city"
+            />
+            <button type="button" onclick="renderWeatherSearchCityName()">Search</button>
+          </form>
+          <div class="divider__container">
+            <div class="divider"></div>
+            <p>or</p>
+            <div class="divider"></div>
+          </div>
+          <button class="button__current__location" onclick="">
+            Use my current location
+          </button>
+        </div>
+
+        <div class="container__loading">
+          <div class="isLoading"></div>
+        </div>
+
+        <div class="response__error">
+          <p id="response__error__message">
+            Ops City name entered is incorrect
+          </p>
+        </div>
+
+        <div class="container__response__weather">
+          <div class="container__weather__current">
+            <div class="content__weather__current">
+              <h2 class="name__city" id="current__name__city">
+                
+              </h2>
+              <p>Temperature: <span id="temperature"></span></p>
+              <p>Wind: <span id="wind"></span></p>
+              <p>Humidity: <span id="humidity"></span></p>
+            </div>
+
+            <div class="container__weather__icon">
+              <img
+                src=""
+                alt="icon state weather location"
+                id="weather__icon"
+              />
+              <p id="state__weather"></p>
+            </div>
+          </div>
+
+          <p>4-Day Forecast</p>
+
+          <div class="container__cards"></div>
+        </div>
+      </div>
+    </main>
+
+    <template>
+      <div class="card">
+        <h3>(2024-03-01)</h3>
+        <img src="" alt="state weather" />
+        <p>maximal: <span id="maximal__card"></span></p>
+        <p>wind: <span id="wind__card"></span></p>
+        <p>humidity: <span id="humidity__card"></span></p>
+      </div>
+    </template>
+    <script src="/api/key_api.js" defer></script>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

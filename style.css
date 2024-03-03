@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-size: 62.5%;
+
+  --background-color: #BAE6FD;
+  --primary-color: #1D4ED8;
+  --secondary-color: #64748B;
+  --text-font-color: #fff;
+
+}
+
+body{
+  font-size: 1.6rem;
+
+  background: var(--background-color);
+  color: var(--text-font-color);
+}
+
+button {
+  width: 100%;
+  height: 4.8rem;
+
+  border: .1rem solid var(--secondary-color);
+  border-radius: .5rem;
+
+  background-color: var(--primary-color);
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  color: var(--text-font-color);
+}
+
+header {
+  background: var(--primary-color);
+  padding-block: 1rem;
+  text-align: center;
+}
+
+.container {
+  padding: 2.6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.6rem;
+}@media only screen and (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.container__search {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form__search__city__name{
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+
+.form__search__city__name label {
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: #000;
+}
+
+.form__search__city__name input {
+  width: 100%;
+  height: 4.2rem;
+
+  border: 0.1rem solid var(--secondary-color);
+  border-radius: .5rem;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  padding-inline: .8rem;
+
+  text-transform: capitalize;
+}@media only screen and (min-width: 1024px) {
+  .form__search__city__name input {
+    width: 47.8rem;
+  }
+}
+
+.button__current__location {
+  background: var(--secondary-color);
+}
+
+.divider__container {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  opacity: 0.4;
+}
+
+.divider {
+  width: 100%;
+  height: .1rem;
+
+  border: .1rem solid var(--secondary-color);
+}
+
+.divider__container p {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.container__response__weather {
+  display: none;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.container__response__weather > p {
+  color: #000;
+  font-weight: 700;
+}
+
+.container__weather__current {
+  background-color: var(--primary-color);
+
+  border-radius: .5rem;
+
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__weather__current {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.name__city {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.container__weather__currency p {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.container__weather__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__cards {
+  position: relative;
+
+  padding-bottom: 1rem;
+
+  display: flex;
+  gap: 1.6rem;
+
+  overflow-x: scroll;
+}@media only screen and (min-width: 1024px) {
+  .container__cards {
+    overflow-x: hidden;
+  }
+}
+
+.card {
+  background-color: var(--secondary-color);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  padding: .8rem 1rem;
+
+  border-radius: .5rem;
+  box-shadow: .4rem .4rem .4rem rgba(0, 0, 0, 0.25);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-wrap: nowrap;
+}
+
+.card img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.container__loading {
+  display: none;
+  justify-content: center;
+}@media only screen and (min-width: 1024px) {
+  .container__loading {
+    align-items: center;
+  }
+}
+
+.isLoading {
+  width: 5rem;
+  height: 5rem;
+
+  border: .5rem solid var(--primary-color);
+  border-radius: 50%;
+  border-top-color: transparent;
+
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);  
+  }
+}
+
+.response__error{
+  display: none;
+
+  text-align: center;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  color: var(--primary-color);
+}@media only screen and (min-width: 1024px) {
+  .response__error {
+    font-size: 3rem;
+
+    align-items: center;
+  }
+}
